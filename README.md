@@ -6,4 +6,4 @@ We design a simple web app by using flutter, it has only a menu and some text on
 
 ### Food App flutter web Final UI
 
-![App UI](/Flutter Web.png)
+![App UI](./Flutter Web.png)
