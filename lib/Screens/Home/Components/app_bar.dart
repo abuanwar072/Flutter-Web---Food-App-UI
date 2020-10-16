@@ -24,13 +24,14 @@ class CustomAppBar extends StatelessWidget {
         children: <Widget>[
           Image.asset(
             "assets/images/logo.png",
-            height: 25,
+            height: 35,
             alignment: Alignment.topCenter,
           ),
           SizedBox(width: 5),
-          Text(
-            "Foodi".toUpperCase(),
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          Image.asset(
+            "assets/images/name_logo.png",
+            height: 50,
+            alignment: Alignment.topCenter,
           ),
           Spacer(),
           MenuItem(
@@ -38,11 +39,11 @@ class CustomAppBar extends StatelessWidget {
             press: () {},
           ),
           MenuItem(
-            title: "about",
+            title: "Menu",
             press: () {},
           ),
           MenuItem(
-            title: "Pricing",
+            title: "Order",
             press: () {},
           ),
           MenuItem(

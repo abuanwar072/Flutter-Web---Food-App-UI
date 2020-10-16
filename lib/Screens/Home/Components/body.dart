@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Burger".toUpperCase(),
+            "KingZGrill",
             style: Theme.of(context).textTheme.headline1.copyWith(
                   color: kTextcolor,
                   fontWeight: FontWeight.bold,
@@ -50,12 +50,17 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 15),
-                  Text(
-                    "Get Started".toUpperCase(),
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 19,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, "/menu");
+                    },
+                    child: Text(
+                      "Menu".toUpperCase(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 19,
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
