@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:food_web/Screens/Home/Components/app_bar.dart';
-import 'package:food_web/Screens/Home/Components/body.dart';
+import 'package:food_web/Screens/Home/Components/app_bar_mobile.dart';
 import 'package:food_web/Screens/Home/Components/drawer.dart';
 
-import 'Components/app_bar_mobile.dart';
-import 'Components/body_mobile.dart';
+class OrderNow extends StatefulWidget {
+  OrderNow({Key key}) : super(key: key);
 
-class HomeScreen extends StatelessWidget {
+  @override
+  _OrderNowState createState() => _OrderNowState();
+}
+
+class _OrderNowState extends State<OrderNow> {
+  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    // This size provide us total height and width  of our screen
-    print(size.width);
     return Scaffold(
       drawer: CustomDrawer(),
-
       body: Container(
         height: size.height,
         // it will take full width
@@ -31,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             getAppBar(size.width),
             Spacer(),
             // It will cover 1/3 of free spaces
-            getBody(size.width),
+            Text("order now TBD"),
             Spacer(
               flex: 2,
             ),
@@ -47,14 +49,5 @@ class HomeScreen extends StatelessWidget {
       return CustomAppBar();
     else 
       return CustomAppBarMobile();
-  }
-
-  Widget getBody(double width){
-    if(width > 760){
-      return Body();
-    }
-    else{
-      return BodyOfMobile();
-    }
   }
 }

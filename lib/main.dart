@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_web/Screens/Home/home_screen.dart';
 import 'package:food_web/Screens/Menu/menu_screen.dart';
+import 'package:food_web/Screens/Order/order_now.dart';
 import 'package:food_web/constant.dart';
 
 import 'Screens/Home/home_screen.dart';
@@ -13,14 +14,13 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
       title: 'KingZGrill',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
         '/menu': (context) => MenuScreen(),
+        '/order': (context) => OrderNow(),
       },
       theme: ThemeData(
         primaryColor: kPrimaryColor,
@@ -32,6 +32,6 @@ class MyApp extends StatelessWidget {
       ),
       home: HomeScreen(),
     );
-  }
+  
 }
 

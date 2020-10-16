@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:food_web/constant.dart';
 
-class Body extends StatelessWidget {
+class BodyOfMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,14 +16,13 @@ class Body extends StatelessWidget {
               child: Text("KingZGrill"),
             ),
           ),
-          SizedBox(height: 20.0,),
           Container(
-            width: MediaQuery.of(context).size.width * 2 / 6,
+            width: MediaQuery.of(context).size.width * 2 / 5,
             child: AutoSizeText(
               "At KingZ Grill all of our food is grilled to order and our aim is to provide fresh and healthy alternative to fast food. We have created a mouth-watering menu of dishes for everyone to enjoy inspired by flavours from all over.",
               maxLines: 11,
               maxFontSize: 140,
-              minFontSize: 20,
+              minFontSize: 18,
             ),
           ),
           SizedBox(
@@ -61,7 +60,7 @@ class Body extends StatelessWidget {
                       // TODO: Add navigation to menu
                     },
                     child: Text(
-                      "Oredr now".toUpperCase(),
+                      "Menu".toUpperCase(),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

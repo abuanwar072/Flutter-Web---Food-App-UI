@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_web/Components/default_button.dart';
+import 'package:food_web/Screens/Home/home_screen.dart';
+import 'package:food_web/Screens/Menu/menu_screen.dart';
+import 'package:food_web/Screens/Order/order_now.dart';
 
 import 'menu_item.dart';
 
@@ -36,15 +39,29 @@ class CustomAppBar extends StatelessWidget {
           Spacer(),
           MenuItem(
             title: "Home",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => HomeScreen()));
+                
+            },
           ),
           MenuItem(
             title: "Menu",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => MenuScreen())
+              );
+            },
           ),
-          MenuItem(
-            title: "Order",
-            press: () {},
+          DefaultButton(
+            text: "Order",
+            press: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => OrderNow()));
+            },
           ),
           MenuItem(
             title: "Contact",
@@ -52,10 +69,6 @@ class CustomAppBar extends StatelessWidget {
           ),
           MenuItem(
             title: "Login",
-            press: () {},
-          ),
-          DefaultButton(
-            text: "Get Started",
             press: () {},
           ),
         ],
