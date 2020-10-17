@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:food_web/Screens/Home/Components/app_bar.dart';
 import 'package:food_web/Screens/Home/Components/app_bar_mobile.dart';
@@ -12,17 +14,21 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  PdfPageImage _pageImage;
+  Uint8List _pageImage;
   void getPdf() async {
     final document = await PdfDocument.openAsset('assets/pdfs/menu_1.pdf');
     final page = await document.getPage(1);
-    final pageImage = await page.render(width: page.width, height: page.height);
+    Size size = MediaQuery.of(context).size;
+    final pageImage = await page.render(
+        width: size.width.toInt(), height: size.height.toInt());
     await page.close();
-    _pageImage = pageImage;
+    setState(() {
+      _pageImage = pageImage.bytes;
+    });
   }
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     getPdf();
   }
@@ -48,9 +54,7 @@ class _MenuScreenState extends State<MenuScreen> {
             getAppBar(size.width),
             Spacer(),
             // It will cover 1/3 of free spaces
-            Image(
-              image: MemoryImage(_pageImage.bytes)
-            ),
+            Image(image: MemoryImage(_pageImage)),
             Spacer(
               flex: 2,
             ),

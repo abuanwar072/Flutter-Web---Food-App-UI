@@ -61,7 +61,7 @@ class Body extends StatelessWidget {
                       // TODO: Add navigation to menu
                     },
                     child: Text(
-                      "Oredr now".toUpperCase(),
+                      "Order now".toUpperCase(),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
