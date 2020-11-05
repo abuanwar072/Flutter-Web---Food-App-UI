@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
 
       body: Container(
         height: size.height,
+        padding: EdgeInsets.only(left:20.0),
         // it will take full width
         width: size.width,
         decoration: BoxDecoration(
@@ -50,7 +51,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget getBody(double width){
-    if(width > 760){
+    if(width > 790){
       return Body();
     }
     else{

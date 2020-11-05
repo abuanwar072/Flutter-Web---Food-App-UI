@@ -30,6 +30,8 @@ dependencies:
   fluro: "^1.6.3"
   auto_size_text: "2.1.0"
   native_pdf_renderer: any
+  bloc: ^3.0.0
+  flutter_bloc: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +61,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: CourierPolski1941
+      fonts:
+        - asset: assets/fonts/zai_CourierPolski1941.ttf
+    - family: OhNow
+      fonts:  
+        - asset: assets/fonts/OhNow.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

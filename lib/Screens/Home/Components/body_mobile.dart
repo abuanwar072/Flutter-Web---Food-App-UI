@@ -1,5 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:food_web/Screens/Menu/menu_screen.dart';
+import 'package:food_web/Screens/Order/order_now.dart';
 import 'package:food_web/constant.dart';
 
 class BodyOfMobile extends StatelessWidget {
@@ -13,7 +15,12 @@ class BodyOfMobile extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width * 4 / 9,
             child: FittedBox(
-              child: Text("KingZGrill"),
+              child: Text(
+                "KingZGrill",
+                style: TextStyle(
+                  fontStyle: FontStyle.normal,
+                ), 
+              ),
             ),
           ),
           Container(
@@ -57,10 +64,13 @@ class BodyOfMobile extends StatelessWidget {
                   SizedBox(width: 15),
                   GestureDetector(
                     onTap: () {
-                      // TODO: Add navigation to menu
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OrderNow()));
                     },
                     child: Text(
-                      "Menu".toUpperCase(),
+                      "order now".toUpperCase(),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

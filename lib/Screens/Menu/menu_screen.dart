@@ -53,6 +53,7 @@ class _MenuScreenState extends State<MenuScreen> {
           children: <Widget>[
             getAppBar(size.width),
             Spacer(),
+            // Scrollable
             // It will cover 1/3 of free spaces
             Image(image: MemoryImage(_pageImage)),
             Spacer(
