@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-
-import '../../../constant.dart';
+import 'package:food_web/Screens/Home/constants.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;
-  final Function press;
-  const MenuItem({
-    Key key,
-    this.title,
-    this.press,
-  }) : super(key: key);
+  final void Function() press;
+  const MenuItem({super.key, required this.title, required this.press});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +12,10 @@ class MenuItem extends StatelessWidget {
       onTap: press,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Text(
-          title.toUpperCase(),
-          style: TextStyle(
-            color: kTextcolor.withOpacity(0.3),
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        child: Text(title.toUpperCase(),
+            style: TextStyle(
+                color: kTextColor.withOpacity(0.3),
+                fontWeight: FontWeight.bold)),
       ),
     );
   }
