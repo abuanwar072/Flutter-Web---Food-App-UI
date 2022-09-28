@@ -1,9 +1,16 @@
-# Flutter Web - Food App - Flutter UI
+# food_web
 
-## [Watch it on YouTube](https://youtu.be/E6fLm5XlJDY)
+A new Flutter project.
 
-We design a simple web app by using flutter, it has only a menu and some text on left side also a background image.
+## Getting Started
 
-### Food App flutter web Final UI
+This project is a starting point for a Flutter application.
 
-![App UI](./Flutter%20Web.png)
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
